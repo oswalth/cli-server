@@ -6,6 +6,7 @@ import json
 import hashlib
 import uuid
 import secrets
+import platform
 
 MESSAGE_LIMIT = 128
 # storage = {
@@ -148,7 +149,8 @@ def make_app():
 
 
 if __name__ == "__main__":
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+	if platform.system() == 'Windows':
+		asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     app = make_app()
     app.listen(8888)
     tornado.ioloop.IOLoop.current().start()
