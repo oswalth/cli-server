@@ -149,8 +149,8 @@ def make_app():
 
 
 if __name__ == "__main__":
-	if platform.system() == 'Windows':
-		asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    if platform.system() == 'Windows':
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     app = make_app()
     app.listen(8888)
     tornado.ioloop.IOLoop.current().start()
