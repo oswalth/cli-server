@@ -7,6 +7,7 @@ import hashlib
 import uuid
 import secrets
 import platform
+import os
 
 MESSAGE_LIMIT = 128
 # storage = {
@@ -152,5 +153,5 @@ if __name__ == "__main__":
     if platform.system() == 'Windows':
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     app = make_app()
-    app.listen(8888)
+    app.listen(host='0.0.0.0', port=os.environ.get('PORT', 5000))
     tornado.ioloop.IOLoop.current().start()
