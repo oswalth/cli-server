@@ -10,16 +10,11 @@ import platform
 import os
 
 MESSAGE_LIMIT = 128
-# storage = {
-#     'rooms': {},
-#     'users': {},
-#     'tokens': {}
-# }
-storage = {'rooms': {'testroom1': {'users': {'WE1y1ivozdZKBXHt76iPBnvZJo3sZ1OUYHcCBSwDo6k': 'not_oswalth'}, 'messages': []}}, 'users': {'oswalth': {'salt': 'fb6ff7b1dcfa4d4881f47a0ffebf30ac',
-                                                                                                                                                    'key': 'f3faefb66ce9709c60c7865ff2bc09ab7f7c7a743bc5d5c7ba88293f65de22e8e561ab4e402783bf44c83d2cf839e30f03663612a1c770a6b53a72ff96fb5383', 'token': 'WE1y1ivozdZKBXHt76iPBnvZJo3sZ1OUYHcCBSwDo6k'}}, 'tokens': {'WE1y1ivozdZKBXHt76iPBnvZJo3sZ1OUYHcCBSwDo6k': 'oswalth'}}
-
-# storage = {'rooms': {'testroom': {'users': {'yrrxfZRASDn8-rH4glzvaeyxeFek7OplgdEOO9KtjVE': 'oswalth'}, 'messages': []}}, 'users': {'oswalth': {'salt': '44529692a1a143a5be4e81f26d529469',
-#                                                                                                                                                'key': 'fd3c2a846fa908b282b591aadc5a05e61f623fe8f5665e5fb5fdb3eda55300d561a072cf6d27014b72d8694403d51b05584008059a2daacb1512421adb59c452', 'token': 'yrrxfZRASDn8-rH4glzvaeyxeFek7OplgdEOO9KtjVE'}}, 'tokens': {'yrrxfZRASDn8-rH4glzvaeyxeFek7OplgdEOO9KtjVE': 'oswalth'}}
+storage = {
+    'rooms': {},
+    'users': {},
+    'tokens': {}
+}
 
 
 class NewRoomHandle(tornado.web.RequestHandler):
